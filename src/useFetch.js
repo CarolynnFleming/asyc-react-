@@ -2,7 +2,20 @@ import { useState, useEffect } from 'react';
 import { getMovies } from './services/fetch-utils';
 
 export default function useFetch() {
-    const [movies, setMovies] = useState([]);
-    const [isLoading, setisLoading] = useState(false);
-  return <div></div>;
+  const [movies, setMovies] = useState([]);
+  const [isLoading, setLoading] = useState(false);
+
+  async function fetchData() {
+    setLoading(true);
+  
+    const data = await getMovies();
+    
+    setLoading(false);
+    setMovies(data);
+  }
+
+  return {
+    movies, isLoading, setLoading,
+  };
 }
+
