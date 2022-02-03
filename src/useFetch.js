@@ -13,7 +13,9 @@ export default function useFetch() {
     setLoading(false);
     setMovies(data);
   }
-
+useEffect(() => {
+    fetchData();
+}, []);
   return {
     movies, isLoading, setLoading,
   };
