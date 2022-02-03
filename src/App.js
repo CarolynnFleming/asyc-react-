@@ -1,6 +1,6 @@
 import './App.css';
-import { getMovies } from './services/fetch-utils.js';
-import { useState } from 'react';
+import { getMovies } from './services/fetch-utils';
+import { useState, useEffect } from 'react';
 
 function App() {
   const [movies, setMovies] = useState([]);
