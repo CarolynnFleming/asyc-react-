@@ -27,6 +27,7 @@ function App() {
 
   useEffect(() =>{
     fetchData();
+    fetchMusicData();
   }, []);
 
 
