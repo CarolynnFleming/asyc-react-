@@ -7,6 +7,8 @@ import homer from './spinner.gif';
 function App() {
   const [movies, setMovies] = useState([]);
   const [isLoading, setLoading] = useState(false);
+  const [music, setMusic] = useState([]);
+  const [musicLoading, setMusicLoading] = useState(false);
 
   async function fetchData(){
     setLoading(true);
