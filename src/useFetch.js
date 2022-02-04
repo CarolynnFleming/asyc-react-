@@ -40,6 +40,7 @@ export default function useFetch() {
   useEffect(() => {
     fetchData();
     fetchMusicData();
+    fetchShowsData();
   }, []);
   return {
     movies, setMovies, isLoading, setLoading, music, setMusic, musicLoading, setMusicLoading
