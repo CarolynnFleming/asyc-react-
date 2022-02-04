@@ -43,7 +43,7 @@ export default function useFetch() {
     fetchShowsData();
   }, []);
   return {
-    movies, setMovies, isLoading, setLoading, music, setMusic, musicLoading, setMusicLoading
+    movies, setMovies, isLoading, setLoading, music, setMusic, musicLoading, setMusicLoading, shows, setShows, showsLoading, setShowsLoading
   };
 }
 
