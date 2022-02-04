@@ -1,5 +1,5 @@
 import './App.css';
-import { getMovies } from './services/fetch-utils';
+import { getMovies, getMusic } from './services/fetch-utils';
 import MoviesList from './MoviesList';
 import { useState, useEffect } from 'react';
 import homer from './spinner.gif';
