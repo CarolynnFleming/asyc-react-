@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import homer from './spinner.gif';
 import MusicList from './MusicList';
 import beyonce from './beyonce.gif';
+import ShowsList from './ShowsList';
 
 function App() {
   const [movies, setMovies] = useState([]);
