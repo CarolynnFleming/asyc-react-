@@ -18,8 +18,8 @@ export async function getMusic(){
 
 export async function getShows() {
   const response = await client
-  .from('shows')
-  .select();
+    .from('shows')
+    .select();
 
   checkError(response);
 }

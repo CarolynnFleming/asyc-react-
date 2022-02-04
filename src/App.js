@@ -1,5 +1,5 @@
 import './App.css';
-import { getMovies, getMusic } from './services/fetch-utils';
+import { getMovies, getMusic, getShows } from './services/fetch-utils';
 import MoviesList from './MoviesList';
 import { useState, useEffect } from 'react';
 import homer from './spinner.gif';
@@ -11,6 +11,8 @@ function App() {
   const [isLoading, setLoading] = useState(false);
   const [music, setMusic] = useState([]);
   const [musicLoading, setMusicLoading] = useState(false);
+  const [shows, setShows] = useState([]);
+  const [showsLoading, setShowsLoading] = useState(false);
 
   async function fetchData() {
     setLoading(true);
