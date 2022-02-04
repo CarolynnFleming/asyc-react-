@@ -11,11 +11,18 @@ function App() {
   const [music, setMusic] = useState([]);
   const [musicLoading, setMusicLoading] = useState(false);
 
-  async function fetchData(){
+  async function fetchData() {
     setLoading(true);
     const data = await getMovies();
     setLoading(false);
     setMovies(data);
+  }
+
+  async function fetchMusicData() {
+    setMusicLoading(true);
+    const data = await getMusic();
+    setMusicLoading(false);
+    setMusic(data);
   }
 
   useEffect(() =>{
