@@ -4,6 +4,7 @@ import MoviesList from './MoviesList';
 import { useState, useEffect } from 'react';
 import homer from './spinner.gif';
 import MusicList from './MusicList';
+import beyonce from './beyonce.gif';
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -40,6 +41,13 @@ function App() {
           ? <img src={homer}/>
 
           : <MoviesList movies={movies}/>
+      }
+      <h1>Music</h1>
+      {
+        musicLoading
+          ? <img src={beyonce}/>
+
+          : <MusicList music={music}/>
       }
      
     </div>
