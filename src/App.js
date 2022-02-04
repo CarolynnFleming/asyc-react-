@@ -28,6 +28,12 @@ function App() {
     setMusicLoading(false);
     setMusic(data);
   }
+  async function fetchShowsData() {
+    setShowsLoading(true);
+    const data = await getShows();
+    setShowsLoading(false);
+    setShows(data);
+  }
 
   useEffect(() =>{
     fetchData();
