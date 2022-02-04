@@ -5,8 +5,8 @@ export default function MoviesList({ movies }) {
     {movies.map(({ name, is_classic, famous_directors, famous_actor }, i) => <div key={`${name}-${i}`}>
       <h3>{name}</h3>
       <p>{is_classic ? 'forever in our hearts' : 'generic'}</p>
-      <ul>{famous_directors}</ul>
-      <ul>{famous_actor}</ul>
+      <li>{famous_directors}</li>
+      <li>{famous_actor}</li>
     </div>)
     }
   </div>;
