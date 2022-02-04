@@ -16,6 +16,15 @@ export default function useFetch() {
     setLoading(false);
     setMovies(data);
   }
+  
+  async function fetchMusicData() {
+    setMusicLoading(true);
+
+    const data = await getMusic;
+
+    setMusicLoading(false);
+    setMusic(data);
+  }
   useEffect(() => {
     fetchData();
   }, []);
