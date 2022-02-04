@@ -7,3 +7,11 @@ export async function getMovies(){
 
   return checkError(response);
 }
+
+export async function getMusic(){
+  const response = await client
+    .from('music')
+    .select();
+
+  return checkError(response);
+}
