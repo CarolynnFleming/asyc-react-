@@ -30,7 +30,7 @@ export default function useFetch() {
     fetchMusicData();
   }, []);
   return {
-    movies, isLoading, setLoading,
+    movies, setMovies, isLoading, setLoading, music, setMusic, musicLoading, setMusicLoading
   };
 }
 
