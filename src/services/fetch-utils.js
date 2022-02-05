@@ -16,10 +16,11 @@ export async function getMusic(){
   return checkError(response);
 }
 
-export async function getShows() {
+export async function getShows(){
   const response = await client
     .from('shows')
     .select();
+    
 
-  checkError(response);
+  return checkError(response);
 }
