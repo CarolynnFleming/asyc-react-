@@ -53,7 +53,7 @@ export default function useFetch() {
     fetchFurnitureData();
   }, []);
   return {
-    movies, setMovies, isLoading, setLoading, music, setMusic, musicLoading, setMusicLoading, shows, setShows, showsLoading, setShowsLoading, 
+    movies, setMovies, isLoading, setLoading, music, setMusic, musicLoading, setMusicLoading, shows, setShows, showsLoading, setShowsLoading, furntiture, setFurniture, furnitureLoading, setFurnitureLoading 
   };
 }
 
