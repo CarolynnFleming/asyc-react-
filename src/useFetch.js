@@ -16,37 +16,34 @@ export default function useFetch() {
   
     const data = await getMovies();
     
-    setMovies(data);
     setLoading(false);
-    
+    setMovies(data);
   }
   
   async function fetchMusicData() {
     setMusicLoading(true);
 
     const data = await getMusic();
-    
-    setMusic(data);
+
     setMusicLoading(false);
-   
+    setMusic(data);
   }
 
   async function fetchShowsData() {
     setShowsLoading(true);
 
     const data = await getShows();
-    console.log(data, '////////');
-    setShows(data);
+
     setShowsLoading(false);
+    setShows(data);
   }
   useEffect(() => {
     fetchData();
     fetchMusicData();
     fetchShowsData();
   }, []);
-  
   return {
-    movies, setMovies, isLoading, setLoading, music, setMusic, musicLoading, setMusicLoading, shows, setShows, showsLoading, setShowsLoading, fetchData
+    movies, setMovies, isLoading, setLoading, music, setMusic, musicLoading, setMusicLoading, shows, setShows, showsLoading, setShowsLoading
   };
 }
 

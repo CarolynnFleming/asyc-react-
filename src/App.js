@@ -10,13 +10,38 @@ import yonce from './yonce.gif';
 import useFetch from './useFetch';
 
 function App() {
-  // const [movies, setMovies] = useState([]);
-  // const [isLoading, setLoading] = useState(false);
-  // const [music, setMusic] = useState([]);
-  // const [musicLoading, setMusicLoading] = useState(false);
-  // const [shows, setShows] = useState([]);
-  // const [showsLoading, setShowsLoading] = useState(false);
-  const { movies, setMovies, isLoading, setLoading, music, setMusic, musicLoading, setMusicLoading, shows, setShows, showsLoading, setShowsLoading, fetchData } = useFetch();
+  const [movies, setMovies] = useState([]);
+  const [isLoading, setLoading] = useState(false);
+  const [music, setMusic] = useState([]);
+  const [musicLoading, setMusicLoading] = useState(false);
+  const [shows, setShows] = useState([]);
+  const [showsLoading, setShowsLoading] = useState(false);
+
+  async function fetchData() {
+    setLoading(true);
+    const data = await getMovies();
+    setLoading(false);
+    setMovies(data);
+  }
+
+  async function fetchMusicData() {
+    setMusicLoading(true);
+    const data = await getMusic();
+    setMusicLoading(false);
+    setMusic(data);
+  }
+  async function fetchShowsData() {
+    setShowsLoading(true);
+    const data = await getShows();
+    setShows(data);
+    setShowsLoading(false);
+  }
+
+  useEffect(() =>{
+    fetchData();
+    fetchMusicData();
+    fetchShowsData();
+  }, []);
 
 
   return (
