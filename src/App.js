@@ -7,7 +7,6 @@ import MusicList from './MusicList';
 import beyonce from './beyonce.gif';
 import ShowsList from './ShowsList';
 import yonce from './yonce.gif';
-import useFetch from './useFetch';
 
 function App() {
   const [movies, setMovies] = useState([]);

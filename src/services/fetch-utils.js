@@ -27,8 +27,8 @@ export async function getShows(){
 
 export async function getFurniture() {
   const response = await client
-  .from('furniture')
-  .select();
+    .from('furniture')
+    .select();
 
   return checkError(response);
 }
