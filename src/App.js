@@ -7,6 +7,7 @@ import MusicList from './MusicList';
 import beyonce from './beyonce.gif';
 import ShowsList from './ShowsList';
 import yonce from './yonce.gif';
+import FurnitureList from './FurnitureList';
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -76,6 +77,13 @@ function App() {
           ? <img src={yonce}/>
         
           : <ShowsList shows={shows}/>
+      }
+      <h1>Furniture</h1>
+      {
+        furnitureLoading
+          ? <img src={yonce}/>
+
+          : <FurnitureList furniture={furntiture}/>
       }
      
     </div>
