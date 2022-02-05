@@ -24,3 +24,11 @@ export async function getShows(){
 
   return checkError(response);
 }
+
+export async function getFurniture() {
+  const response = await client
+  .from('furniture')
+  .select();
+
+  return checkError(response);
+}
