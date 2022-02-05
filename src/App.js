@@ -49,7 +49,7 @@ function App() {
     fetchData();
     fetchMusicData();
     fetchShowsData();
-    
+    fetchFurnitureData();
   }, []);
 
 
