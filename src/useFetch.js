@@ -50,6 +50,7 @@ export default function useFetch() {
     fetchData();
     fetchMusicData();
     fetchShowsData();
+    fetchFurnitureData();
   }, []);
   return {
     movies, setMovies, isLoading, setLoading, music, setMusic, musicLoading, setMusicLoading, shows, setShows, showsLoading, setShowsLoading, 
