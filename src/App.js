@@ -1,5 +1,5 @@
 import './App.css';
-import { getMovies, getMusic, getShows } from './services/fetch-utils';
+import { getFurniture, getMovies, getMusic, getShows } from './services/fetch-utils';
 import MoviesList from './MoviesList';
 import { useState, useEffect } from 'react';
 import homer from './spinner.gif';
@@ -37,12 +37,19 @@ function App() {
     setShows(data);
     setShowsLoading(false);
   }
-  
+
+  async function fetchFurnitureData() {
+    setFurnitureLoading(true);
+    const data = await getFurniture();
+    setFurniture(data);
+    setFurnitureLoading(false);
+  }
 
   useEffect(() =>{
     fetchData();
     fetchMusicData();
     fetchShowsData();
+    
   }, []);
 
 
