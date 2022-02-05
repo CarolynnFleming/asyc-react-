@@ -9,6 +9,8 @@ export default function useFetch() {
   const [musicLoading, setMusicLoading] = useState(false);
   const [shows, setShows] = useState([]);
   const [showsLoading, setShowsLoading] = useState(false);
+  const [furntiture, setFurniture] = useState([]);
+  const [furnitureLoading, setFurnitureLoading] = useState(false);
 
 
   async function fetchData() {
