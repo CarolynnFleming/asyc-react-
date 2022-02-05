@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getMovies, getMusic, getShows } from './services/fetch-utils';
+import { getMovies, getMusic, getShows, getFurniture } from './services/fetch-utils';
 
 
 export default function useFetch() {
@@ -39,13 +39,20 @@ export default function useFetch() {
     setShowsLoading(false);
     setShows(data);
   }
+
+  async function fetchFurnitureData() {
+    setFurnitureLoading(true);
+    const data = await getFurniture();
+    setFurniture(data);
+    setFurnitureLoading(false);
+  }
   useEffect(() => {
     fetchData();
     fetchMusicData();
     fetchShowsData();
   }, []);
   return {
-    movies, setMovies, isLoading, setLoading, music, setMusic, musicLoading, setMusicLoading, shows, setShows, showsLoading, setShowsLoading
+    movies, setMovies, isLoading, setLoading, music, setMusic, musicLoading, setMusicLoading, shows, setShows, showsLoading, setShowsLoading, 
   };
 }
 
