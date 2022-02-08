@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getMovies, getMusic, getShows } from './services/fetch-utils';
+import { getMovies, getMusic, getShows, getFurniture } from './services/fetch-utils';
 
 
 export default function useFetch() {
@@ -9,6 +9,8 @@ export default function useFetch() {
   const [musicLoading, setMusicLoading] = useState(false);
   const [shows, setShows] = useState([]);
   const [showsLoading, setShowsLoading] = useState(false);
+  const [furntiture, setFurniture] = useState([]);
+  const [furnitureLoading, setFurnitureLoading] = useState(false);
 
 
   async function fetchData() {
@@ -23,7 +25,7 @@ export default function useFetch() {
   async function fetchMusicData() {
     setMusicLoading(true);
 
-    const data = await getMusic;
+    const data = await getMusic();
 
     setMusicLoading(false);
     setMusic(data);
@@ -37,13 +39,21 @@ export default function useFetch() {
     setShowsLoading(false);
     setShows(data);
   }
+
+  async function fetchFurnitureData() {
+    setFurnitureLoading(true);
+    const data = await getFurniture();
+    setFurniture(data);
+    setFurnitureLoading(false);
+  }
   useEffect(() => {
     fetchData();
     fetchMusicData();
     fetchShowsData();
+    fetchFurnitureData();
   }, []);
   return {
-    movies, setMovies, isLoading, setLoading, music, setMusic, musicLoading, setMusicLoading, shows, setShows, showsLoading, setShowsLoading
+    movies, setMovies, isLoading, setLoading, music, setMusic, musicLoading, setMusicLoading, shows, setShows, showsLoading, setShowsLoading, furntiture, setFurniture, furnitureLoading, setFurnitureLoading 
   };
 }
 

@@ -1,13 +1,13 @@
 import React from 'react';
 
 export default function ShowsList({ shows }) {
-  return <div className='shows-list'>
+  return <div className='show-list'>
     {
-      shows.map(({ name, genre, director, good }, i) => <div key={`${name}-${i}`}>
-        <h3>{name}</h3>
+      shows.map(({ shows_name, genre, director, is_good }, i) => <div key={`${shows_name}-${i}`}>
+        <h3>{shows_name}</h3>
+        <p>{is_good ? 'Amazing' : 'Crazy'}</p>
         <li>{genre}</li>
         <li>{director}</li>
-        <p>{good ? 'Amazing' : 'Crazy'}</p>
       </div>)
     }
   </div>;

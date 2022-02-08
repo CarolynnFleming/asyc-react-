@@ -36,3 +36,32 @@
     transform: rotate(360deg);
   }
 }
+.movie-list{
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  border: solid #ba274a .5em;
+}
+.music-list{
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  border: solid #ba274a .5em;
+}
+
+.show-list{
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  border: solid #ba274a .5em;
+}
+.furniture-list{
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  border: solid #ba274a .5em;
+}
